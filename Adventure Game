@@ -1,0 +1,56 @@
+name = input("type your name: ")
+print("welcome",name,"to this adventure!")
+answer = input("You are on a dirt road, it has come to an end and you can go left (type left) or right (type right). Which way would you like to go? ").lower()
+if answer == "left":
+    answer = input("You come to a river, you can walk around it (type walk) or swim across (type swim)? ").lower()
+    
+    if answer == "swim":
+        print("you swam across and were eaten by an alligator. You lose.")
+        quit()
+    elif answer == "walk":
+        print("you walked for many miles, ran out of water, and lost the game.")
+        quit()
+    else:
+        print("not a valid option, you lose.")
+        quit()
+
+elif answer == "right":
+    answer = input("You come to a bridge and it looks wobbly. Do you want to cross it? (type cross or back)").lower()
+    if answer == "back":
+        print("you go back to the main road and lose.")
+        quit()
+    elif answer == "cross":
+        answer = input("You cross the bridge and see a stanger. Do you talk to them? (type yes or no)").lower()
+        if answer == "yes":
+            print("the stanger gives you a map to treasure but it costs all your food, you die looking for the treasure. you lose.")
+            quit()
+        elif answer == "no":
+            answer = input("you took a wrong turn and are approached by a cheetah. Do you try to tame it or run away? (type tame or run) ").lower()
+            if answer == "tame":
+                print("the cheetah responded kindly and gave you a ride.")
+                answer = input("you now approach a mountain and can not get help from the cheetah anymore. Do you try to climb the mountain or walk around? (type climb or around) ").lower()
+                if answer == "climb":
+                print("you had just enough energy to make it to the top where you are safe from danger. you win!")
+                    quit()
+                elif answer == "around":
+                    print("while trying to make it through the jungle you were bit by a snake and died. you lose")
+                    quit()
+                else:
+                    print("not a valid option, you lose.")
+                    quit()
+            elif answer == "run":
+                print("you scared the cheetah, it ran after you, and it ate you. you lose")
+                quit()
+            else:
+                print("not a valid option, you lose.")
+                quit()
+        else:
+            print("not a valid option, you lose.")
+            quit()
+
+    else:
+        print("not a valid option, you lose.")
+        quit()
+else:
+    print("not a valid option, you lose.")
+    quit() 
